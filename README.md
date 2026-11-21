@@ -5,6 +5,8 @@
 A from-scratch single-cycle RV32I core with a hand-written assembler and a
 program-level verification testbench. Runs entirely on M1.
 
+![Architecture](docs/diagrams/architecture.svg)
+
 ## Core
 
 `src/rv32i_core.sv` implements the full RV32I base integer instruction set
@@ -66,13 +68,18 @@ Makefile               convenience targets
 make sim                # same
 ```
 
-
 ## Next (FPGA host)
 
 - Run the core through the **RISCOF** compliance suite (rv32i/priv tests) via
   Spike co-sim to close the formal-compliance gap.
 - Swap in a richer open core (Ibex / VexRiscv) and take to build for a
   soft-SoC on the FPGA host.
+
+## Test run
+
+Output of the CI command (`./run_sim.sh`), captured from a local run:
+
+![Test run](docs/screenshots/test_run.svg)
 
 ## Setup
 
